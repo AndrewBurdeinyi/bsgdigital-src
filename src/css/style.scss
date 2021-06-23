@@ -1,0 +1,59 @@
+// Import css from node_modules
+
+
+
+// Import css from components
+
+@import "../css/components/_fonts.scss";
+@import "../css/components/_first-block.scss";
+@import "../css/components/_middle-block.scss";
+@import "../css/components/_footer.scss";
+
+// Global style
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+.wrapper {
+    max-width: 1171px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid rgba(217, 223, 230, .2);
+    border-right: 1px solid rgba(217, 223, 230, .2);
+}
+.center-line {
+    width: 1px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: rgba(217, 223, 230, .2);
+}
+.word-wrapper {
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden;
+    .word-wrapper__inner {
+        display: inline-block;
+        transform: translateY(100%);
+        transition-delay: .3s;
+        transition: 1.1s;
+    }
+}
+.is-show {
+    opacity: 1 !important;
+    .word-wrapper {
+        .word-wrapper__inner {
+            transform: translateY(0);
+        }
+    }
+    &::before {
+        opacity: 1 !important;
+    }
+}
+

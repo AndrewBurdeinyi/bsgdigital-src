@@ -1,0 +1,187 @@
+.first-block {
+  background-color: #233148;
+  padding: 0 28px;
+  min-height: 1302px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .wrapper {
+    min-height: 1302px;
+    padding-top: 169px;
+    h1 {
+      max-width: 355px;
+      font-family: 'Proxima Nova';
+      font-size: 48px;
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      position: relative;
+      margin-top: 5px;
+      &::before {
+        transition-delay: .2s;
+        opacity: 0;
+        transition: .8s;
+        content: "";
+        display: block;
+        width: 28px;
+        height: 29px;
+        background: url("../img/symbol.png");
+        position: absolute;
+        top: -53px;
+      }
+    }
+    .first-block__content {
+      position: relative;
+      z-index: 99;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .first-block__element {
+        max-width: 425px;
+        width: 100%;
+        margin-top: 94px;
+        margin-left: 0;
+        position: relative;
+        right: 11px;
+        &:first-child {
+          img {
+            width: 55px;
+            height: 54px;
+          }
+        }
+        &:nth-child(2n) {
+          top: 0;
+          right: 6px;
+        }
+        &:nth-child(3) {
+          h3 {margin-left: 2px;}
+          img {
+            width: 55px;
+            height: 55px;
+          }
+        }
+        img {
+          transition-delay: .2s;
+          opacity: 0;
+          transition: .8s;
+          position: relative;
+          top: 6px;
+          width: 54px;
+          height: 54px;
+          &.smile {
+            top: 4px;
+          }
+        }
+        h3 {
+          margin: 24px 0 34px;
+          font-family: 'Proxima Nova';
+          font-size: 32px;
+          line-height: 1.2;
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          color: #ffffff;
+        }
+        p {
+          font-family: 'Proxima Nova';
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 300;
+          letter-spacing: 0.02em;
+          color: #8796ae;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  .symbol-logo {
+    max-width: 582px;
+    width: 100%;
+    height: 682px;
+    background: url("../img/symbol_logo.png");
+    background-position: center;
+    position: absolute;
+    top: calc(50% - 471px);
+  }
+}
+
+@media (max-width: 1450px) {
+ html body .first-block {
+   min-height: 1313px;
+   .wrapper {
+     min-height: 1313px;
+     padding-top: 180px;
+   }
+ }
+ }
+
+@media (max-width: 910px) {
+  html body .first-block {
+    .wrapper {
+      padding-top: 127px;
+      h1 {
+        max-width: 230px;
+        left: 2px;
+        top: -1px;
+        font-size: 30px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        &:before {
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: -40px;
+        }
+      }
+      .first-block__content {
+        position: relative;
+        top: -4px;
+        .first-block__element {
+          margin-top: 32px;
+          right: 1px;
+          &:nth-child(2n) {
+            top: 0;
+            right: 0;
+          }
+          &:nth-child(3) {
+            top: 3px;
+            img {
+              top:10px;
+            }
+          }
+          &:nth-child(4) {
+            top: 5px;
+            img {top:8px;}
+          }
+          img {
+            width: 37px;
+            height: 37px;
+            &:first-child {
+              width: 37px;
+              height: 37px;
+            }
+          }
+          h3 {
+            margin: 17px 0 26px;
+            font-size: 22px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+          }
+          p {
+            min-width: 318px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+    }
+    .symbol-logo {
+      top: calc(46% - 468px);
+    }
+  }
+}
