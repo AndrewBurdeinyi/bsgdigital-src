@@ -1,4 +1,4 @@
-# layout_code_kit
+# bsgdigital
 This Build system is based on the gulp task manager. Its main purpose is layout.
 
 ## Basic commands for working with the build system
